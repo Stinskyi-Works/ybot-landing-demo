@@ -3146,8 +3146,8 @@ header .content .buttons {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   padding-bottom: 24px;
