@@ -13,10 +13,10 @@
       <div class="wrapper-full">
         <div class="row middle-xs">
           <div class="content col-xs-12 col-sm-10 col-sm-offset-1">
-            <div class="burger-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#05060E"/>
-              </svg>
+            <div class="burger-icon" id="header-open">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
             </div>
             <div class="separator"></div>       
             <div class="logo"></div>
@@ -437,17 +437,11 @@
           <div class="cover">
             <div class="overlay"></div>
             <div class="title">How it works</div>
-            <button id="video-play">
+            <button id="video-open">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.25 21.0001C5.05109 21.0001 4.86032 20.921 4.71967 20.7804C4.57902 20.6397 4.5 20.449 4.5 20.2501V3.75006C4.49999 3.61972 4.53395 3.49163 4.59852 3.37842C4.6631 3.2652 4.75606 3.17077 4.86825 3.10443C4.98044 3.03808 5.10798 3.00212 5.2383 3.00009C5.36862 2.99806 5.49722 3.03002 5.61143 3.09283L20.6114 11.3428C20.7291 11.4075 20.8273 11.5027 20.8956 11.6183C20.964 11.7339 21 11.8657 21 12C21 12.1343 20.964 12.2662 20.8956 12.3818C20.8273 12.4974 20.7291 12.5925 20.6114 12.6572L5.61143 20.9072C5.50069 20.9681 5.37637 21 5.25 21.0001Z" fill="#05060E"/>
               </svg>                
             </button>
-          </div>
-        </div>
-        <div id="video-modal" class="modal hidden">
-          <div class="modal-content">
-            <iframe class="modal-video" src="https://www.youtube-nocookie.com/embed/34Na4j8AVgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <button id="video-close" class="close">&times;</button>
           </div>
         </div>
       </section>
@@ -471,9 +465,147 @@
         </div>
       </section>
 
+      <!-- Video modal -->
+      <div id="video-modal" class="modal">
+        <div class="container">
+          <div class="header">
+            <div class="logo"></div>
+            <button id="video-close" class="close"></button>
+          </div>
+          <div class="content">
+            <div id="video-loader" class="loader-container">
+              <div class="loader"></div>
+            </div>
+            <iframe id="video-iframe" src="https://www.youtube-nocookie.com/embed/34Na4j8AVgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terms modal -->
+      <div id="terms-modal" class="modal">
+        <div class="container">
+          <div class="header">
+            <div class="logo"></div>
+            <button id="terms-close" class="close"></button>
+          </div>
+          <div class="content">
+            <div id="terms-loader" class="loader-container">
+              <div class="loader"></div>
+            </div>
+            <iframe id="terms-iframe" src="https://onedrive.live.com/embed?cid=6DBD13C76814939A&resid=6DBD13C76814939A%21970&authkey=AKntrI4S-NHgxK0&em=2" title="ybot Privacy Policy" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Privacy modal -->
+      <div id="privacy-modal" class="modal">
+        <div class="container">
+          <div class="header">
+            <div class="logo"></div>
+            <button id="privacy-close" class="close"></button>
+          </div>
+          <div class="content">
+            <div id="privacy-loader" class="loader-container">
+              <div class="loader"></div>
+            </div>
+            <iframe id="privacy-iframe" src="https://onedrive.live.com/embed?cid=6DBD13C76814939A&resid=6DBD13C76814939A%21973&authkey=AK7YUjY3-zTJY78&em=2" title="ybot Website Terms of Use" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile header -->
+      <div id="header-modal" class="header-modal">
+        <div class="container">
+          <div class="content">
+           <div class="row">
+             <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+               <ul class="nav">
+                 <li><a href="#">Products</a></li>
+                 <li><a href="#">Solutions</a></li>
+                 <li><a href="#">Case studies</a></li>
+                 <li><a href="#">Team</a></li>
+                 <li><a href="#">More</a></li>
+               </ul>
+               <div class="buttons">
+                <button class="medium">Contact sales</button>
+                <button class="medium outlined">Sign Up</button>
+              </div>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+
     </main>
-    <!-- <footer style="display: flex; justify-content: center; align-items: center;">
-      footer
-    </footer> -->
+
+    <footer>
+      <div class="wrapper-full">
+        <div class="row middle-xs">
+          <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+            <ul class="nav">
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Why wait?</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Docs</a></li>
+              <li><a href="#">Company</a></li>
+            </ul>
+            <div class="separator"></div>
+          </div>
+        </div>
+        <div class="row middle-sm">
+          <div class="col-sm-6 col-sm-offset-1 col-xs-12">
+            <div class="terms">
+              <a id="terms-open">Terms & Conditions</a>
+              <a id="privacy-open">Privacy Policy</a>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12 last-sm first-xs">
+            <ul class="socials">
+              <li>
+                <a href="#">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 7.9375C9.73828 7.9375 7.89844 9.77734 7.89844 12.0391C7.89844 14.3008 9.73828 16.1406 12 16.1406C14.2617 16.1406 16.1016 14.3008 16.1016 12.0391C16.1016 9.77734 14.2617 7.9375 12 7.9375ZM12 7.9375C9.73828 7.9375 7.89844 9.77734 7.89844 12.0391C7.89844 14.3008 9.73828 16.1406 12 16.1406C14.2617 16.1406 16.1016 14.3008 16.1016 12.0391C16.1016 9.77734 14.2617 7.9375 12 7.9375ZM19.0703 2H4.92969C3.3125 2 2 3.3125 2 4.92969V19.0703C2 20.6875 3.3125 22 4.92969 22H19.0703C20.6875 22 22 20.6875 22 19.0703V4.92969C22 3.3125 20.6875 2 19.0703 2ZM12 17.3125C9.09379 17.3125 6.72656 14.9453 6.72656 12.0391C6.72656 9.13277 9.09379 6.76562 12 6.76562C14.9062 6.76562 17.2734 9.13277 17.2734 12.0391C17.2734 14.9453 14.9062 17.3125 12 17.3125ZM18.4453 6.76562C17.8008 6.76562 17.2734 6.23828 17.2734 5.59375C17.2734 4.94922 17.8008 4.42188 18.4453 4.42188C19.0898 4.42188 19.6172 4.94922 19.6172 5.59375C19.6172 6.23828 19.0898 6.76562 18.4453 6.76562ZM12 7.9375C9.73828 7.9375 7.89844 9.77734 7.89844 12.0391C7.89844 14.3008 9.73828 16.1406 12 16.1406C14.2617 16.1406 16.1016 14.3008 16.1016 12.0391C16.1016 9.77734 14.2617 7.9375 12 7.9375ZM12 7.9375C9.73828 7.9375 7.89844 9.77734 7.89844 12.0391C7.89844 14.3008 9.73828 16.1406 12 16.1406C14.2617 16.1406 16.1016 14.3008 16.1016 12.0391C16.1016 9.77734 14.2617 7.9375 12 7.9375ZM12 7.9375C9.73828 7.9375 7.89844 9.77734 7.89844 12.0391C7.89844 14.3008 9.73828 16.1406 12 16.1406C14.2617 16.1406 16.1016 14.3008 16.1016 12.0391C16.1016 9.77734 14.2617 7.9375 12 7.9375Z" fill="#38393F"/>
+                  </svg>                
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9975 2H12.0025C17.5162 2 22 6.48625 22 12C22 17.5138 17.5162 22 12.0025 22C9.96875 22 8.0825 21.395 6.50125 20.3475L2.6575 21.5763L3.90375 17.8612C2.705 16.215 2 14.1875 2 12C2 6.485 6.48375 2 11.9975 2ZM15.8588 17.5323C16.6225 17.3673 17.58 16.8023 17.8213 16.1211C18.0625 15.4386 18.0625 14.8573 17.9925 14.7336C17.936 14.6354 17.8023 14.571 17.6028 14.475C17.5509 14.4499 17.4945 14.4228 17.4338 14.3923C17.14 14.2461 15.7113 13.5398 15.4413 13.4461C15.1763 13.3461 14.9238 13.3811 14.7238 13.6636C14.6857 13.7168 14.6478 13.7702 14.61 13.8233C14.3687 14.1626 14.136 14.49 13.9425 14.6986C13.7663 14.8861 13.4788 14.9098 13.2375 14.8098C13.2112 14.7989 13.1811 14.7867 13.1473 14.773C12.7653 14.6188 11.9181 14.2766 10.8925 13.3636C10.0275 12.5936 9.44002 11.6348 9.27002 11.3473C9.10311 11.0589 9.24708 10.8898 9.38015 10.7335C9.38261 10.7306 9.38507 10.7277 9.38752 10.7248C9.47331 10.6187 9.55656 10.5303 9.64023 10.4415C9.70041 10.3776 9.76081 10.3134 9.82252 10.2423C9.83169 10.2318 9.8406 10.2215 9.84928 10.2115C9.98032 10.0609 10.0583 9.97114 10.1463 9.78357C10.2463 9.58982 10.175 9.38982 10.1038 9.24232C10.0548 9.13902 9.75193 8.40429 9.49197 7.77355C9.38072 7.50363 9.27732 7.25276 9.20502 7.07857C9.01127 6.61482 8.86377 6.59732 8.57002 6.58482C8.56103 6.58437 8.55194 6.58391 8.54276 6.58344C8.44991 6.57874 8.34764 6.57357 8.23502 6.57357C7.85252 6.57357 7.45377 6.68607 7.21252 6.93232C7.20409 6.94093 7.19531 6.94986 7.18619 6.95914C6.87755 7.27303 6.19002 7.97225 6.19002 9.36607C6.19002 10.7626 7.1809 12.1141 7.36424 12.3642C7.36929 12.3711 7.37373 12.3771 7.37752 12.3823C7.38855 12.3968 7.40935 12.4269 7.43961 12.4707C7.81396 13.0129 9.63732 15.6534 12.3563 16.7798C14.6538 17.7323 15.3363 17.6436 15.8588 17.5323Z" fill="#38393F"/>
+                  </svg>                
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.34571 10.233L21.629 2.79803C22.524 2.47469 23.3057 3.01636 23.0157 4.36969L23.0174 4.36803L19.734 19.8364C19.4907 20.933 18.839 21.1997 17.9274 20.683L12.9274 16.998L10.5157 19.3214C10.249 19.588 10.024 19.813 9.50737 19.813L9.86238 14.7247L19.129 6.35303C19.5324 5.99803 19.039 5.79803 18.5074 6.15136L7.05571 13.3614L2.11904 11.8214C1.04737 11.4814 1.02404 10.7497 2.34571 10.233Z" fill="#38393F"/>
+                  </svg>                
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.6666 5.38501C21.8733 5.73301 21.0279 5.96367 20.1466 6.07567C21.0533 5.53434 21.7453 4.68367 22.0706 3.65834C21.2253 4.16234 20.2919 4.51834 19.2973 4.71701C18.4946 3.86234 17.3506 3.33301 16.1026 3.33301C13.6813 3.33301 11.7319 5.29834 11.7319 7.70767C11.7319 8.05434 11.7613 8.38767 11.8333 8.70501C8.19725 8.52767 4.97992 6.78501 2.81859 4.13034C2.44125 4.78501 2.21992 5.53434 2.21992 6.34101C2.21992 7.85567 2.99992 9.19834 4.16259 9.97567C3.45992 9.96234 2.77059 9.75834 2.18659 9.43701C2.18659 9.45034 2.18659 9.46767 2.18659 9.48501C2.18659 11.6103 3.70259 13.3757 5.69059 13.7823C5.33459 13.8797 4.94659 13.9263 4.54392 13.9263C4.26392 13.9263 3.98125 13.9103 3.71592 13.8517C4.28259 15.5837 5.89059 16.857 7.80259 16.8983C6.31459 18.0623 4.42525 18.7637 2.37992 18.7637C2.02125 18.7637 1.67725 18.7477 1.33325 18.7037C3.27059 19.953 5.56659 20.6663 8.04259 20.6663C16.0906 20.6663 20.4906 13.9997 20.4906 8.22101C20.4906 8.02767 20.4839 7.84101 20.4746 7.65567C21.3426 7.03967 22.0719 6.27034 22.6666 5.38501Z" fill="#38393F"/>
+                  </svg>                
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/ybotai/">
+                  <svg width="20" height="20" viewBox="0 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m475.074219 0h-438.148438c-20.394531 0-36.925781 16.53125-36.925781 36.925781v438.148438c0 20.394531 16.53125 36.925781 36.925781 36.925781h438.148438c20.394531 0 36.925781-16.53125 36.925781-36.925781v-438.148438c0-20.394531-16.53125-36.925781-36.925781-36.925781zm-293.464844 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0" fill="#38393F" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row middle-xs">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="cp">Copyright (C) 2021, ybot International Inc.<br/>We have presence and partners across the US and Canada, Middle East and North Africa, UK and Europe, Asia, Southeast Asia and Pacific</div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
