@@ -3767,6 +3767,9 @@ svg.arrow.visible .end {
     line-height: 32px;
   }
 }
+.agentless .wrapper {
+  padding-bottom: 0px;
+}
 .agentless .wrapper .titles {
   display: -webkit-box;
   display: -ms-flexbox;
